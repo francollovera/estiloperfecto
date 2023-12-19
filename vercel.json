@@ -1,7 +1,12 @@
 {
-    "rewrites": [
-      { "source": "/proyecto.html", "destination": "/proyecto.html" },
-      { "source": "/edicion.css", "destination": "/edicion.css" },
-      { "source": "/fotos/(.*)", "destination": "/fotos/$1" }
+    "routes": [
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/(.*)",
+        "status": 404,
+        "dest": "/404.html"
+      }
     ]
   }
